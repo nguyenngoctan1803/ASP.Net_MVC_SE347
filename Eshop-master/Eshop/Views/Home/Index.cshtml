@@ -120,7 +120,55 @@ Deal of the day
                                         {
                                             <li class="cat-item "><a href="~/@item.slug">@item.name</a></li>
                                         }*@
-                                    <li class="cat-item hidden-menu-item"><a href="#">Indoor Living</a></li>
+                                    <li class="cat-item hidden-menu-item">
+                                        <a href="#">
+                                            <div class="dropdown">
+                                                <button class="dropbtn">
+                                                    Thề Loại
+                                                    <i class="fa fa-caret-down"></i>
+                                                </button>
+                                                <div class="dropdown-content">
+                                                    <a href="#"> <a asp-action="Sachgiaokhoa" asp-controller="Products" class="font-weight-bold">Sách giáo khoa</a></a>
+                                                    <a href="#"> <a asp-action="Sachthamkhao" asp-controller="Products" class="font-weight-bold">Sách tham khảo</a></a>
+                                                    <a href="#"> <a asp-action="Sachnuocngoai" asp-controller="Products" class="font-weight-bold">Sách nước ngoài</a></a>
+                                                    <a href="#"> <a asp-action="Bao" asp-controller="Products" class="font-weight-bold">Báo & Tạp chí</a></a>
+                                                    <a href="#"> <a asp-action="Tieuthuyet" asp-controller="Products" class="font-weight-bold">Tiểu thuyết & Tự truyện</a></a>
+                                                    <a href="#"> <a asp-action="Khac" asp-controller="Products" class="font-weight-bold">Khác</a></a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="cat-item hidden-menu-item">
+                                        <a href="#">
+                                            <div class="dropdown">
+                                                <button class="dropbtn">
+                                                    Tác giả
+                                                    <i class="fa fa-caret-down"></i>
+                                                </button>
+                                                <div class="dropdown-content">
+                                                    <a href="#"> <a asp-action="Rossie" asp-controller="Products" class="font-weight-bold">Rossie</a></a>
+                                                    <a href="#"> <a asp-action="Hanhquan" asp-controller="Products" class="font-weight-bold">Hành Quân</a></a>
+                                                    <a href="#"> <a asp-action="Abado" asp-controller="Products" class="font-weight-bold">Abado</a></a>
+                                                    <a href="#"> <a asp-action="Johncena" asp-controller="Products" class="font-weight-bold">John Ce na</a></a>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="cat-item hidden-menu-item">
+                                        <a href="#">
+                                            <div class="dropdown">
+                                                <button class="dropbtn">
+                                                    Nhà sản xuất
+                                                    <i class="fa fa-caret-down"></i>
+                                                </button>
+                                                <div class="dropdown-content">
+                                                    <a href="#"> <a asp-action="Khanquangco" asp-controller="Products" class="font-weight-bold">Khăn Quàng Đỏ</a></a>
+                                                    <a href="#"> <a asp-action="Kimdongdoan" asp-controller="Products" class="font-weight-bold">Kim Đồng Đoàn</a></a>
+
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
                                     <li class="cat-item"><a href="#" class="js-expand-hidden-menu">Xem thêm</a></li>
                                 </ul>
                             </div>
@@ -159,6 +207,32 @@ Deal of the day
             .text-darkk ul li a:hover {
                 color: #62ab00 !important;
             }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            .dropdown-content a {
+                float: none;
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+                .dropdown-content a:hover {
+                    background-color: #ddd;
+                }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
     </style>
 }
 <section class="section-padding ">
