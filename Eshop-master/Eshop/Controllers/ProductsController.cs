@@ -58,5 +58,197 @@ namespace Eshop.Controllers
         {
             return _context.Products.Any(e => e.Id == id);
         }
+        public async Task<IActionResult> Abado(string name)
+        {
+            if (HttpContext.Session.GetString("username") != null)
+            {
+                ViewBag.username = HttpContext.Session.GetString("username");
+            }
+            else
+            {
+                ViewBag.Err = name;
+
+            }
+            ViewBag.Banner = _context.Advertisement.Where(a => a.ImageTypeId == 2);
+            ViewBag.Adv = _context.Advertisement.Where(a => a.ImageTypeId == 1);
+            var eshopContext = _context.Products.Where(p => p.Author == "Abado");
+            return View(await eshopContext.OrderBy(x => x.Id).Take(12).ToListAsync());
+        }
+        public async Task<IActionResult> Hanhquan(string name)
+        {
+            if (HttpContext.Session.GetString("username") != null)
+            {
+                ViewBag.username = HttpContext.Session.GetString("username");
+            }
+            else
+            {
+                ViewBag.Err = name;
+
+            }
+            ViewBag.Banner = _context.Advertisement.Where(a => a.ImageTypeId == 2);
+            ViewBag.Adv = _context.Advertisement.Where(a => a.ImageTypeId == 1);
+            var eshopContext = _context.Products.Where(p => p.Author == "Hành Quân");
+            return View(await eshopContext.OrderBy(x => x.Id).Take(12).ToListAsync());
+        }
+        public async Task<IActionResult> Rossie(string name)
+        {
+            if (HttpContext.Session.GetString("username") != null)
+            {
+                ViewBag.username = HttpContext.Session.GetString("username");
+            }
+            else
+            {
+                ViewBag.Err = name;
+
+            }
+            ViewBag.Banner = _context.Advertisement.Where(a => a.ImageTypeId == 2);
+            ViewBag.Adv = _context.Advertisement.Where(a => a.ImageTypeId == 1);
+            var eshopContext = _context.Products.Where(p => p.Author == "Rossie");
+            return View(await eshopContext.OrderBy(x => x.Id).Take(12).ToListAsync());
+        }
+        public async Task<IActionResult> Johncena(string name)
+        {
+            if (HttpContext.Session.GetString("username") != null)
+            {
+                ViewBag.username = HttpContext.Session.GetString("username");
+            }
+            else
+            {
+                ViewBag.Err = name;
+
+            }
+            ViewBag.Banner = _context.Advertisement.Where(a => a.ImageTypeId == 2);
+            ViewBag.Adv = _context.Advertisement.Where(a => a.ImageTypeId == 1);
+            var eshopContext = _context.Products.Where(p => p.Author == "John Ce na");
+            return View(await eshopContext.OrderBy(x => x.Id).Take(12).ToListAsync());
+        }
+        public async Task<IActionResult> Khanquangco(string name)
+        {
+            if (HttpContext.Session.GetString("username") != null)
+            {
+                ViewBag.username = HttpContext.Session.GetString("username");
+            }
+            else
+            {
+                ViewBag.Err = name;
+
+            }
+            ViewBag.Banner = _context.Advertisement.Where(a => a.ImageTypeId == 2);
+            ViewBag.Adv = _context.Advertisement.Where(a => a.ImageTypeId == 1);
+            var eshopContext = _context.Products.Where(p => p.Publishing == "Khăn Choàng Cổ");
+            return View(await eshopContext.OrderBy(x => x.Id).Take(12).ToListAsync());
+        }
+        public async Task<IActionResult> Kimdongdoan(string name)
+        {
+            if (HttpContext.Session.GetString("username") != null)
+            {
+                ViewBag.username = HttpContext.Session.GetString("username");
+            }
+            else
+            {
+                ViewBag.Err = name;
+
+            }
+            ViewBag.Banner = _context.Advertisement.Where(a => a.ImageTypeId == 2);
+            ViewBag.Adv = _context.Advertisement.Where(a => a.ImageTypeId == 1);
+            var eshopContext = _context.Products.Where(p => p.Publishing == "Kim Đồng Đoàn");
+            return View(await eshopContext.OrderBy(x => x.Id).Take(12).ToListAsync());
+        }
+        public async Task<IActionResult> Sachgiaokhoa(string name)
+        {
+            if (HttpContext.Session.GetString("username") != null)
+            {
+                ViewBag.username = HttpContext.Session.GetString("username");
+            }
+            else
+            {
+                ViewBag.Err = name;
+
+            }
+            ViewBag.Banner = _context.Advertisement.Where(a => a.ImageTypeId == 2);
+            ViewBag.Adv = _context.Advertisement.Where(a => a.ImageTypeId == 1);
+            var eshopContext = _context.Products.Where(p => p.ProductTypeId == 1);
+            return View(await eshopContext.OrderBy(x => x.Id).Take(12).ToListAsync());
+        }
+        public async Task<IActionResult> Sachthamkhao(string name)
+        {
+            if (HttpContext.Session.GetString("username") != null)
+            {
+                ViewBag.username = HttpContext.Session.GetString("username");
+            }
+            else
+            {
+                ViewBag.Err = name;
+
+            }
+            ViewBag.Banner = _context.Advertisement.Where(a => a.ImageTypeId == 2);
+            ViewBag.Adv = _context.Advertisement.Where(a => a.ImageTypeId == 1);
+            var eshopContext = _context.Products.Where(p => p.ProductTypeId == 2);
+            return View(await eshopContext.OrderBy(x => x.Id).Take(12).ToListAsync());
+        }
+        public async Task<IActionResult> Sachnuocngoai(string name)
+        {
+            if (HttpContext.Session.GetString("username") != null)
+            {
+                ViewBag.username = HttpContext.Session.GetString("username");
+            }
+            else
+            {
+                ViewBag.Err = name;
+
+            }
+            ViewBag.Banner = _context.Advertisement.Where(a => a.ImageTypeId == 2);
+            ViewBag.Adv = _context.Advertisement.Where(a => a.ImageTypeId == 1);
+            var eshopContext = _context.Products.Where(p => p.ProductTypeId == 3);
+            return View(await eshopContext.OrderBy(x => x.Id).Take(12).ToListAsync());
+        }
+        public async Task<IActionResult> Bao(string name)
+        {
+            if (HttpContext.Session.GetString("username") != null)
+            {
+                ViewBag.username = HttpContext.Session.GetString("username");
+            }
+            else
+            {
+                ViewBag.Err = name;
+
+            }
+            ViewBag.Banner = _context.Advertisement.Where(a => a.ImageTypeId == 2);
+            ViewBag.Adv = _context.Advertisement.Where(a => a.ImageTypeId == 1);
+            var eshopContext = _context.Products.Where(p => p.ProductTypeId == 4);
+            return View(await eshopContext.OrderBy(x => x.Id).Take(12).ToListAsync());
+        }
+        public async Task<IActionResult> Tieuthuyet(string name)
+        {
+            if (HttpContext.Session.GetString("username") != null)
+            {
+                ViewBag.username = HttpContext.Session.GetString("username");
+            }
+            else
+            {
+                ViewBag.Err = name;
+
+            }
+            ViewBag.Banner = _context.Advertisement.Where(a => a.ImageTypeId == 2);
+            ViewBag.Adv = _context.Advertisement.Where(a => a.ImageTypeId == 1);
+            var eshopContext = _context.Products.Where(p => p.ProductTypeId == 5);
+            return View(await eshopContext.OrderBy(x => x.Id).Take(12).ToListAsync());
+        }
+        public async Task<IActionResult> Khac(string name)
+        {
+            if (HttpContext.Session.GetString("username") != null)
+            {
+                ViewBag.username = HttpContext.Session.GetString("username");
+            }
+            else
+            {
+                ViewBag.Err = name;
+
+            }
+            ViewBag.Banner = _context.Advertisement.Where(a => a.ImageTypeId == 2);
+            ViewBag.Adv = _context.Advertisement.Where(a => a.ImageTypeId == 1);
+            var eshopContext = _context.Products.Where(p => p.ProductTypeId == 6);
+            return View(await eshopContext.OrderBy(x => x.Id).Take(12).ToListAsync());
+        }
     }
 }
