@@ -50,6 +50,7 @@ namespace Eshop.Controllers
                 ViewBag.idAccount = account.Id;
             }
             ViewBag.AccountComment = _context.Comment.Include(c=>c.Account).Where(a=>a.Account.Id  == a.AccountId).Where(a=> a.ProductId == id);
+            ViewBag.SumComment = _context.Comment.Include(c => c.Account).Where(a => a.Account.Id == a.AccountId).Where(a => a.ProductId == id).Count();
             return View(product);
         }
 

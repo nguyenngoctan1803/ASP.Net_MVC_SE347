@@ -199,8 +199,8 @@
                             <span class="fas fa-star "></span>
                         </div>
                         <div class="review-widget">
-                            <a href="">(1 Đánh giá)</a> <span>|</span>
-                            <a href="">Viết đánh giá</a>
+                            <a href="#tab-2">(@ViewBag.SumComment Đánh giá)</a> <span>|</span>
+                            <a href="#tab-2">Viết đánh giá</a>
                         </div>
                     </div>
                         <div class="add-to-cart-row pb-5 pt-3">
@@ -242,7 +242,7 @@
                 <li class="nav-item bg-light">
                     <a class="nav-link bg-light" id="tab2" data-toggle="tab" href="#tab-2" role="tab"
                        aria-controls="tab-2" aria-selected="true">
-                        ĐÁNH GIÁ (1)
+                        ĐÁNH GIÁ (@ViewBag.SumComment)
                     </a>
                 </li>
             </ul>
@@ -257,7 +257,7 @@
                 </div>
                 <div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="tab2">
                     <div class="review-wrapper">
-                        <h2 class="title-lg mb--20">Có 10 bình luận về sản phẩm </h2>
+                        <h2 class="title-lg mb--20">Có @ViewBag.SumComment bình luận về sản phẩm </h2>
                         <div class="review-comment mb--20">
                             <div class="avatar">
                                 <img src="image/icon/author-logo.png" alt="">
